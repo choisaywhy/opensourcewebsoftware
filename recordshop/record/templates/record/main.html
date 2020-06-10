@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>SeHwa's Record Shop</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="{% url 'main' %}" style="font-weight: 700; font-size: 1rem;">Record</a>
+				</li>
+				<li>
+					<a href="{% url 'login' %}">Login</a>
+				</li>
+				<li>
+					<a href="{% url 'join' %}">Join</a>
+				</li>
+				<li>
+					<a href="{% url 'cart' %}">Cart</a>
+				</li>
+				<li>
+					<a href="{% url 'pop_hiphop' %}">POP - HipHop</a>
+				</li>
+				<li>
+					<a href="{% url 'pop_rnb' %}">POP - RnB</a>
+				</li>
+				<li>
+					<a href="{% url 'kpop_indi' %}">KPOP - Indi</a>
+				</li>
+				<li>
+					<a href="{% url 'kpop_hiphop' %}">KPOP - HipHop</a>
+				</li>
+				<li>
+					<a href="{% url 'ost' %}">OST</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section style="margin-top: 40px;">
+			<div class="row">
+				<div class="col-8" style="margin-left:30px; margin-top:-120px;">
+					<h1>SEHWA<br> RECORD SHOP</h1>
+					<p class=" text-align-center" style="font-size: 1.8rem; color: #f9cc2d"> 모두의 취향을 위한, 레코드샵</p>
+				</div>
+			</div>
+		</section>
+	</header>
+	<footer style="margin-left : 100px">
+		<section>
+				<p class="text-ref" style="font-weight: 500">ⓒ 2020. 충북대학교 소프트웨어학과 최세화 All Rights Reserved.</p>
+		</section>		
+	</footer>
+</body>
+</html>

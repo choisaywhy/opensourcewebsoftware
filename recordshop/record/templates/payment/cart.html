@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>SeHwa's Record Shop</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+	<header>
+		<nav style="margin-top: 31px">
+			<ul>
+				<li>
+					<a href="{% url 'main' %}" style="font-weight: 700; font-size: 1rem;">Record</a>
+				</li>
+				<li>
+					<a href="{% url 'login' %}">Login</a>
+				</li>
+				<li>
+					<a href="{% url 'join' %}">Join</a>
+				</li>
+				<li>
+					<a href="{% url 'cart' %}">Cart</a>
+				</li>
+				<li>
+					<a href="{% url 'pop_hiphop' %}">POP - HipHop</a>
+				</li>
+				<li>
+					<a href="{% url 'pop_rnb' %}">POP - RnB</a>
+				</li>
+				<li>
+					<a href="{% url 'kpop_indi' %}">KPOP - Indi</a>
+				</li>
+				<li>
+					<a href="{% url 'kpop_hiphop' %}">KPOP - HipHop</a>
+				</li>
+				<li>
+					<a href="{% url 'ost' %}">OST</a>
+				</li>
+			</ul>
+		</nav>
+
+	</header>
+
+    <section style="margin-top: 90px;">
+		<div class="row">
+			<div class="col-8">
+				<h3 style=" color: #c7b8e0;">Cart</h3>
+			</div>
+		</div>	
+	</section>
+	<section style="margin-top: -30px;">
+		<div class="display" style="">
+			<div class="col-4" style="margin: 13px;">
+				<div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/ost7.jpg'%}" class="card-img-top" alt="albumcover">
+                    <div class="card-body">
+                        <h5 style="text-align:center;" class="card-title">아로하</h5>
+                        <p style="text-align:center;"class="card-text"><br>조정석<br/>14,000won</p>
+                        <a href="{% url 'cart'%}" style="margin-left:30px;">Cart</a>
+                    </div>
+                </div>
+			</div>
+
+            <div class="col-4" style="margin: 13px;">
+				<div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/ost10.png'%}" class="card-img-top" alt="albumcover">
+                    <div class="card-body">
+                        <h5 style="text-align:center;" class="card-title">Can't take my<br>eyes off of you</h5>
+                        <p style="text-align:center;"class="card-text">Lauryn Hill<br/>10,000won</p>
+                        <a href="{% url 'cart'%}" style="margin-left:30px;">Cart</a>
+                    </div>
+                </div>
+			</div>
+            <div class="col-4" style="margin: 13px;">
+				<div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/ost3.jpg'%}" class="card-img-top" alt="albumcover">
+                    <div class="card-body">
+                        <h5 style="text-align:center;" class="card-title">Ship and Globe</h5>
+                        <p style="text-align:center;"class="card-text"><br/>Kae Sun<br/>9,000won</p>
+                        <a href="{% url 'cart'%}" style="margin-left:30px;">Cart</a>
+                    </div>
+                </div>
+			</div>
+        </div>
+
+        <div style="margin-left:330px; width:1000px;">
+            <br>
+            <br>
+            <div style="float : left">
+                <h3 style="margin-top:-15px;text-align:left">주문하기</h3>
+            </div>
+        </div>
+        <div style="margin-top:10px;margin-left:330px; width:1000px;">
+            <br>
+            <hr>
+            <br>
+            <div style="float : left">
+                <h5 style="margin-top:-15px;text-align:left">총 금액</h5>
+            </div>
+            <div style="float:right">
+                <h6 style="text-align:right">33,000won</h6>
+            </div>
+        </div>
+        <div style="margin-top:10px;margin-left:330px; width:1000px;">
+            <br>
+
+            <br>
+            <div style="float : left">
+                <h5 style="margin-top:-15px;text-align:left">결제수단</h5>
+            </div>
+            <div class="form-check form-check-inline" style="float:right;padding-top:px;padding-left:40px;">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="카드결제">
+                <label class="form-check-label" for="inlineCheckbox1"style="font-size:10pt;">카드결제</label>
+            </div>
+            <div class="form-check form-check-inline" style="float:right;padding-top:px;padding-left:40px;">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="무통장입금">
+                <label class="form-check-label" for="inlineCheckbox2"style="font-size:10pt;">무통장입금</label>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div style="margin-left:1140px; margin-top:50px;">
+            <a class="small" href="{% url 'order' %}">Order!</a>
+        </div>
+       
+	</section>
+
+	<footer style="margin-left : 200px;margin-bottom:100px;margin-top:-100px;">
+		<section>
+				<p class="text-ref" style="font-weight: 500">ⓒ 2020. 충북대학교 소프트웨어학과 최세화 All Rights Reserved.</p>
+		</section>		
+	</footer>
+</body>
+</html>
